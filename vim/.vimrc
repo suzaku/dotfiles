@@ -142,12 +142,12 @@ imap <leader>w <ESC>:w<CR>
 nmap <leader>l :JSHint<CR>
 
 " make some invisible characters visible
-set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+" set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 ab #X #XXX DIRTY
 ab //X //XXX DIRTY
 
-let g:user_zen_settings = {
+let g:user_emmet_settings = {
 \  'indentation' : '    ',
 \  'python': {
 \    'snippets': {
