@@ -1,0 +1,20 @@
+[user]
+	name = satoru
+    email = satorulogic@gmail.com
+[core]
+    autocrlf = input
+    safecrlf = true
+    editor = /usr/bin/vim
+[alias]
+    ack = grep --color -n --heading --break 
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    df = diff --color=always
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+[credential] helper = osxkeychain
