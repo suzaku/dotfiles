@@ -1,0 +1,5 @@
+*
+
+# Except
+!vundle
+!.gitignore
