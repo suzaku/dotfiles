@@ -7,10 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="Soliah"
 
-# Example aliases
-alias fili="ssh fili"
-alias devup="cd $HOME/shire-in-vagrant && git pull && vagrant up --no-provision && vagrant ssh && vagrant suspend"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -21,7 +17,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
@@ -34,12 +30,15 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/satoru/Library/Python/2.7/bin:/usr/local/bin:/sbin:/usr/sbin:/Users/satoru/bin:/usr/local/smlnj-110.75/bin/
-export PATH=/Users/satoru/.cljr/bin:$PATH
-
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/satoru/Library/Python/2.7/bin:/usr/local/bin:/sbin:/usr/sbin:/Users/satoru/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export WORKON_HOME=~/.py_venv
-source /usr/local/bin/virtualenvwrapper.sh
 
 export EDITOR=/usr/bin/vim
+
+dev() {
+    cd $HOME/shire-in-vagrant;
+    vagrant up --no-provision && vagrant ssh && vagrant suspend;
+}
+
