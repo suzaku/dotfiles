@@ -156,3 +156,5 @@ let g:user_emmet_settings = {
 \    }
 \  }
 \}
+
+set statusline=%t%m%y%=(%c,%l)\ %L\ lines\ %p%%
