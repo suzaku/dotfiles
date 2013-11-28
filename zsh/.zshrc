@@ -39,6 +39,7 @@ export EDITOR=/usr/bin/vim
 
 dev() {
     cd $HOME/shire-in-vagrant;
-    vagrant up --no-provision && vagrant ssh && vagrant suspend;
+    vagrant up --no-provision;
+    sshpass -p "vagrant" ssh -o StrictHostKeyChecking=no vagrant@192.168.33.10 && vagrant suspend;
 }
 
