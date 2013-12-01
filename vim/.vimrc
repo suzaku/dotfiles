@@ -89,6 +89,7 @@ imap <C-J> <C-X><C-O>
 ca w!! w !sudo tee "%"
 
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 
 let python_highlight_all=1
