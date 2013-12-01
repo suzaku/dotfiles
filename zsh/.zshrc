@@ -43,3 +43,4 @@ dev() {
     sshpass -p "vagrant" ssh -o StrictHostKeyChecking=no vagrant@192.168.33.10 && vagrant suspend;
 }
 
+alias gack="git --no-pager grep --color -n --heading --break"
