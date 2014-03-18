@@ -20,6 +20,9 @@ Bundle 'FuzzyFinder'
 Bundle 'L9'
 Bundle 'Emmet.vim'
 Bundle 'python.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'kshenoy/vim-signature'
+Bundle 'wting/rust.vim'
 
 " tabs and spaces handling
 :set smartindent
