@@ -1,7 +1,6 @@
 " no vi-compatible
 set nocompatible
 filetype off
-syntax on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -15,14 +14,17 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-fugitive'
 Bundle 'taglist.vim'
-Bundle 'AutoComplPop'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'FuzzyFinder'
 Bundle 'L9'
 Bundle 'Emmet.vim'
 Bundle 'python.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'kshenoy/vim-signature'
-Bundle 'wting/rust.vim'
+Bundle 'fatih/vim-go'
+Bundle 'tomasr/molokai'
+
+syntax on
 
 " tabs and spaces handling
 :set smartindent
@@ -30,6 +32,7 @@ Bundle 'wting/rust.vim'
 :set tabstop=4
 :set softtabstop=4
 :set shiftwidth=4
+:set backspace=2
 
 set encoding=utf-8
 
@@ -87,14 +90,14 @@ imap <C-J> <C-X><C-O>
 " removes trailing spaces of python files
 " (and restores cursor position)
 " uncomment the following line to enable 
-" autocmd BufWritePre *.py mark z | %s/ *$//e | 'z
+autocmd BufWritePre *.py mark z | %s/ *$//e | 'z
 
 " save as sudo
 ca w!! w !sudo tee "%"
 
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+"let g:solarized_termcolors=256
+colorscheme molokai
 
 let python_highlight_all=1
 
@@ -134,7 +137,7 @@ map <F6> /XXX<CR>
 let mapleader = ","
 
 " fuzzy finder
-nmap <leader>r :FufRenewCache<CR>
+nmap <leader>R :FufRenewCache<CR>
 nmap <leader>e :FufFile<CR>
 nmap <leader>E :FufFileWithCurrentBufferDir<CR>
 nmap <leader>g :FufBufferTag<CR>
@@ -143,8 +146,10 @@ nmap <leader>f :FufLine<CR>
 " other shortcuts
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
+nmap <leader>x :x<CR>
 imap <leader>w <ESC>:w<CR>
 nmap <leader>l :JSHint<CR>
+au FileType go nmap <leader>r <Plug>(go-run)
 
 " make some invisible characters visible
 " set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅

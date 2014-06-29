@@ -30,7 +30,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/satoru/Library/Python/2.7/bin:/usr/local/bin:/sbin:/usr/sbin:/Users/satoru/bin
+
+export GOPATH=$HOME/go
+
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/satoru/Library/Python/2.7/bin:/usr/local/bin:/sbin:/usr/sbin:/Users/satoru/bin:/usr/local/go/bin/
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export WORKON_HOME=~/.py_venv
@@ -44,3 +47,6 @@ dev() {
 }
 
 alias gack="git --no-pager grep --color -n --heading --break"
+alias vi=vim
+
+export PY_PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin/"
