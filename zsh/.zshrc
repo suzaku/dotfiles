@@ -38,7 +38,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export WORKON_HOME=~/.py_venv
 
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 
 dev() {
     cd $HOME/shire-in-vagrant;
