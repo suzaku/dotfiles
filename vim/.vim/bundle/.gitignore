@@ -1,5 +1,5 @@
 *
 
 # Except
-!vundle
+!Vundle.vim
 !.gitignore
