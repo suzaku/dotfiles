@@ -53,4 +53,4 @@ alias vi=vim
 
 export PY_PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin/"
 
-tmux list-sessions 2> /dev/null && tmux attach
+tmux has-session 2> /dev/null && [ ! $TMUX ] && tmux attach
