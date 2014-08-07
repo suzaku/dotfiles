@@ -37,9 +37,11 @@ export WORKON_HOME=~/.py_venv
 export EDITOR=/usr/local/bin/vim
 
 dev() {
-    cd $HOME/shire-in-vagrant;
+    local vagrant_path=${1:-$PWD}
+    cd $vagrant_path;
     vagrant up --no-provision;
-    sshpass -p "vagrant" ssh -o StrictHostKeyChecking=no vagrant@192.168.33.10 && vagrant suspend;
+    #sshpass -p "vagrant" ssh -o StrictHostKeyChecking=no vagrant@192.168.33.10 && vagrant suspend;
+    vagrant ssh && vagrant suspend;
 }
 
 alias gack="git --no-pager grep --color -n --heading --break"
@@ -54,3 +56,4 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+tmux list-sessions 2> /dev/null && tmux attach
