@@ -27,10 +27,6 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-
 export GOPATH=$HOME/go
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/satoru/Library/Python/2.7/bin:/usr/local/bin:/sbin:/usr/sbin:/Users/satoru/bin:/usr/local/go/bin/
@@ -52,5 +48,12 @@ alias gack="git --no-pager grep --color -n --heading --break"
 alias vi=vim
 
 export PY_PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin/"
+
+if [ -e $HOME/.local_zshrc ];
+then 
+    source $HOME/.local_zshrc
+fi
+
+source $ZSH/oh-my-zsh.sh
 
 tmux has-session 2> /dev/null && [ ! $TMUX ] && tmux attach

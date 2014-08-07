@@ -23,8 +23,11 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kshenoy/vim-signature'
 Plugin 'fatih/vim-go'
 Plugin 'tomasr/molokai'
+Plugin 'sprsquish/thrift.vim'
 
 syntax on
+
+au BufRead,BufNewFile *.thrift set filetype=thrift 
 
 " tabs and spaces handling
 :set smartindent
