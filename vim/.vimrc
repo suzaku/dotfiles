@@ -2,27 +2,27 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " Required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-fugitive'
-Bundle 'taglist.vim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'FuzzyFinder'
-Bundle 'L9'
-Bundle 'Emmet.vim'
-Bundle 'python.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'kshenoy/vim-signature'
-Bundle 'fatih/vim-go'
-Bundle 'tomasr/molokai'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-fugitive'
+Plugin 'taglist.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'Emmet.vim'
+Plugin 'python.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'kshenoy/vim-signature'
+Plugin 'fatih/vim-go'
+Plugin 'tomasr/molokai'
 
 syntax on
 

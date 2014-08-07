@@ -1,3 +1,3 @@
 links:
-	stow git zsh vim 
-	vim +BundleInstall +qall
+	stow git zsh vim tmux
+	vim +PluginInstall +qall
