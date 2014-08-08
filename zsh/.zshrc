@@ -56,4 +56,4 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-tmux has-session 2> /dev/null && [ ! $TMUX ] && (tmux list-clients > /dev/null || tmux attach)
+tmux has-session 2> /dev/null && [ -z $TMUX ] && [ -z $(tmux list-clients) ] && tmux attach
