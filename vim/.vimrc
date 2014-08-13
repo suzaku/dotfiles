@@ -24,6 +24,7 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'fatih/vim-go'
 Plugin 'tomasr/molokai'
 Plugin 'sprsquish/thrift.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 syntax on
 
