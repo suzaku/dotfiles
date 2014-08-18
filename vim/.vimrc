@@ -29,6 +29,7 @@ Plugin 'scrooloose/nerdcommenter'
 syntax on
 
 au BufRead,BufNewFile *.thrift set filetype=thrift 
+au BufRead,BufNewFile *.sls set filetype=yaml
 
 " tabs and spaces handling
 :set smartindent
