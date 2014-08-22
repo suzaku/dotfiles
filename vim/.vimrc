@@ -13,7 +13,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
-Plugin 'taglist.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'FuzzyFinder'
 Plugin 'L9'
@@ -61,25 +60,6 @@ set hlsearch
 
 " line numbers
 set rnu
-
-" taglist (class/module browser) settings
-" display function name in status bar
-let g:ctags_statusline=1
-" automatically start script
-let generate_tags=1
-" displays taglist results in a vertical window
-let Tlist_Use_Horiz_Window=0
-" toggle Taglist display
-"map <F4> :TlistToggle<CR>
-" various Taglist diplay config:
-let Tlist_Use_Right_Window = 1
-let Tlist_Compact_Format = 1
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_File_Fold_Auto_Close = 1
-let Tlist_Enable_Fold_Column = 0
-
-map <F4> :MRU<CR>
 
 " automatically close autocompletition window
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
