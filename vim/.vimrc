@@ -25,6 +25,7 @@ Plugin 'tomasr/molokai'
 Plugin 'sprsquish/thrift.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'Lokaltog/vim-powerline'
 
 syntax on
 
