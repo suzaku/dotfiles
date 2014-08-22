@@ -68,11 +68,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " old autocomplete keyboard shortcut
 imap <C-J> <C-X><C-O>
 
-" removes trailing spaces of python files
-" (and restores cursor position)
-" uncomment the following line to enable 
-autocmd BufWritePre *.py mark z | %s/ *$//e | 'z
-
 " save as sudo
 ca w!! w !sudo tee "%"
 
@@ -131,9 +126,6 @@ nmap <leader>x :x<CR>
 imap <leader>w <ESC>:w<CR>
 nmap <leader>l :JSHint<CR>
 au FileType go nmap <leader>r <Plug>(go-run)
-
-" make some invisible characters visible
-" set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 ab #X #XXX DIRTY
 ab //X //XXX DIRTY
