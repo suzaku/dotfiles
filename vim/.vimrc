@@ -124,7 +124,7 @@ nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
 nmap <leader>x :x<CR>
 imap <leader>w <ESC>:w<CR>
-nmap <leader>l :JSHint<CR>
+nmap <leader>b :Gblame<CR>
 au FileType go nmap <leader>r <Plug>(go-run)
 
 ab #X #XXX DIRTY
@@ -141,4 +141,4 @@ let g:user_emmet_settings = {
 \  }
 \}
 
-set statusline=%t%m%y%=(%c,%l)\ %L\ lines\ %p%%
+set statusline=%t%m%y%{fugitive#statusline()}%=(%c,%l)\ %L\ lines\ %p%%
