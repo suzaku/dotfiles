@@ -80,11 +80,6 @@ let Tlist_Enable_Fold_Column = 0
 
 map <F4> :MRU<CR>
 
-" tab navigation
-map tn :tabn<CR>
-map tm :tabm<CR>
-map tt :tabnew 
-
 " automatically close autocompletition window
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
