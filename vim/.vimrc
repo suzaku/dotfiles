@@ -25,6 +25,7 @@ Plugin 'fatih/vim-go'
 Plugin 'tomasr/molokai'
 Plugin 'sprsquish/thrift.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'ekalinin/Dockerfile.vim'
 
 syntax on
 
