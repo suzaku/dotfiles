@@ -157,6 +157,7 @@ au FileType go nmap <leader>r <Plug>(go-run)
 
 ab #X #XXX DIRTY
 ab //X //XXX DIRTY
+ab pdb import pdb; pdb.set_trace()
 
 let g:user_emmet_settings = {
 \  'indentation' : '    ',
