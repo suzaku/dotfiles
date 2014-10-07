@@ -29,7 +29,7 @@ plugins=(git)
 
 export GOPATH=$HOME/go
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/satoru/Library/Python/2.7/bin:/usr/local/bin:/sbin:/usr/sbin:/Users/satoru/bin:/usr/local/go/bin/
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/local/bin:/sbin:/usr/sbin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export WORKON_HOME=~/.py_venv
