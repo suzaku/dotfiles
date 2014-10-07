@@ -44,6 +44,10 @@ dev() {
     vagrant ssh && vagrant suspend;
 }
 
+f_func() {
+    git --no-pager grep --color -n --heading --break -w "def $1"
+}
+
 alias gack="git --no-pager grep --color -n --heading --break"
 alias vi=vim
 
