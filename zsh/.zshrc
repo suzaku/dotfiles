@@ -51,8 +51,6 @@ f_func() {
 alias gack="git --no-pager grep --color -n --heading --break"
 alias vi=vim
 
-export PY_PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin/"
-
 if [ -e $HOME/.local_zshrc ];
 then 
     source $HOME/.local_zshrc
