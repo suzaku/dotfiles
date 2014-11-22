@@ -58,4 +58,4 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-tmux has-session 2> /dev/null && [ -z $TMUX ] && [ -z $(tmux list-clients) ] && tmux attach
+tmux [ $USER = vagrant ] && has-session 2> /dev/null && [ -z $TMUX ] && [ -z $(tmux list-clients) ] && tmux attach
