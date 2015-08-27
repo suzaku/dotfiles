@@ -25,6 +25,8 @@ Plugin 'sprsquish/thrift.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'vim-stylus'
+Plugin 'rust-lang/rust.vim'
 
 syntax on
 
@@ -108,7 +110,7 @@ let OmniCpp_MayCompleteScope = 0
 " change this behaviour with the OmniCpp_SelectFirstItem option.
 let OmniCpp_SelectFirstItem = 0
 
-map <F6> /XXX<CR>
+map <F6> /XXXDFKJ<CR>
 
 let mapleader = ","
 
@@ -118,6 +120,7 @@ nmap <leader>e :FufFile<CR>
 nmap <leader>E :FufFileWithCurrentBufferDir<CR>
 nmap <leader>g :FufBufferTag<CR>
 nmap <leader>f :FufLine<CR>
+let g:fuf_file_exclude = '\v\.pyc$|\.swp$'
 
 " other shortcuts
 nmap <leader>w :w<CR>
@@ -143,3 +146,9 @@ let g:user_emmet_settings = {
 \}
 
 set statusline=%t%m%y%{fugitive#statusline()}%=(%c,%l)\ %L\ lines\ %p%%
+
+autocmd FileType html setlocal sw=2 ts=2 softtabstop=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
