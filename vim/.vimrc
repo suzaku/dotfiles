@@ -27,11 +27,14 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'vim-stylus'
 Plugin 'rust-lang/rust.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'slim-template/vim-slim'
 
 syntax on
 
 au BufRead,BufNewFile *.thrift set filetype=thrift 
 au BufRead,BufNewFile *.sls set filetype=yaml
+au BufRead,BufNewFile *.coffee set filetype=coffee
 
 " tabs and spaces handling
 :set smartindent
@@ -120,7 +123,7 @@ nmap <leader>e :FufFile<CR>
 nmap <leader>E :FufFileWithCurrentBufferDir<CR>
 nmap <leader>g :FufBufferTag<CR>
 nmap <leader>f :FufLine<CR>
-let g:fuf_file_exclude = '\v\.pyc$|\.swp$'
+let g:fuf_file_exclude = '\v\.pyc$|\.swp$|\.beam$'
 
 " other shortcuts
 nmap <leader>w :w<CR>
@@ -149,6 +152,9 @@ set statusline=%t%m%y%{fugitive#statusline()}%=(%c,%l)\ %L\ lines\ %p%%
 
 autocmd FileType html setlocal sw=2 ts=2 softtabstop=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype scss setlocal ts=2 sts=2 sw=2
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
+autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
