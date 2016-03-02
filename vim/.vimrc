@@ -2,33 +2,53 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+"auto-install vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+
+call plug#begin('~/.vim/plugged')
 
 " Required
-Plugin 'gmarik/Vundle.vim'
+Plug 'elzr/vim-json'
+Plug 'pangloss/vim-javascript'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'FuzzyFinder'
+Plug 'L9'
+Plug 'Emmet.vim'
+Plug 'python.vim'
+Plug 'scrooloose/syntastic'
+Plug 'kshenoy/vim-signature'
+Plug 'tomasr/molokai'
+Plug 'sprsquish/thrift.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'Lokaltog/vim-powerline'
+Plug 'vim-stylus'
+Plug 'rust-lang/rust.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'slim-template/vim-slim'
+Plug 'mxw/vim-jsx'
+Plug 'tweekmonster/braceless.vim'
 
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'FuzzyFinder'
-Plugin 'L9'
-Plugin 'Emmet.vim'
-Plugin 'python.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'kshenoy/vim-signature'
-Plugin 'tomasr/molokai'
-Plugin 'sprsquish/thrift.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'Lokaltog/vim-powerline'
-Plugin 'vim-stylus'
-Plugin 'rust-lang/rust.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'slim-template/vim-slim'
+call plug#end()
 
 syntax on
 
@@ -151,10 +171,14 @@ let g:user_emmet_settings = {
 set statusline=%t%m%y%{fugitive#statusline()}%=(%c,%l)\ %L\ lines\ %p%%
 
 autocmd FileType html setlocal sw=2 ts=2 softtabstop=2
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype scss setlocal ts=2 sts=2 sw=2
-autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
-autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
+autocmd FileType slim setlocal sw=2 ts=2 softtabstop=2
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2
+autocmd FileType scss setlocal ts=2 sts=2 sw=2
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2
+autocmd FileType coffee setlocal ts=2 sts=2 sw=2
+autocmd FileType coffee,python BracelessEnable +indent +highlight
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
+
+" let g:jsx_ext_required = 0
