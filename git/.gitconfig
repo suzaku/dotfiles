@@ -4,7 +4,7 @@
 [core]
     autocrlf = input
     safecrlf = true
-    editor = /usr/bin/vim
+    editor = /usr/local/bin/vim
 	excludesfile = ~/.gitignore_global
 [alias]
     ack = grep --color -n --heading --break 
