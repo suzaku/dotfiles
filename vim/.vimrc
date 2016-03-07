@@ -47,6 +47,9 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'slim-template/vim-slim'
 Plug 'mxw/vim-jsx'
 Plug 'tweekmonster/braceless.vim'
+let g:plug_url_format = 'git@github.com:%s.git'
+Plug 'Blackrush/vim-gocode'
+unlet g:plug_url_format
 
 call plug#end()
 
