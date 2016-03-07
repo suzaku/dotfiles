@@ -59,3 +59,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 [ $USER = vagrant ] && tmux has-session 2> /dev/null && [ -z $TMUX ] && [ -z $(tmux list-clients) ] && tmux attach
+
+export PATH="$HOME/.pyenv/bin:$PATH:/usr/local/opt/go/libexec/bin"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
