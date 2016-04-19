@@ -64,3 +64,6 @@ PIPSI_PATH="$HOME/.local/bin"
 export PATH="$HOME/.pyenv/bin:$PATH:/usr/local/opt/go/libexec/bin:$PIPSI_PATH:$GOPATH/bin"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+export HISTFILESIZE=10000 # Record last 10,000 commands
+export HISTSIZE=10000 # Record last 10,000 commands per session
