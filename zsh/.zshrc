@@ -67,3 +67,5 @@ eval "$(pyenv virtualenv-init -)"
 
 export HISTFILESIZE=10000 # Record last 10,000 commands
 export HISTSIZE=10000 # Record last 10,000 commands per session
+
+[[ -s $HOME/.shonenjump.zsh ]] && source $HOME/.shonenjump.zsh
