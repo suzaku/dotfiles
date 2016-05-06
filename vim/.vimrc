@@ -40,7 +40,6 @@ Plug 'tomasr/molokai'
 Plug 'sprsquish/thrift.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'Lokaltog/vim-powerline'
 Plug 'vim-stylus'
 Plug 'rust-lang/rust.vim'
 Plug 'kchmck/vim-coffee-script'
@@ -50,6 +49,7 @@ Plug 'tweekmonster/braceless.vim'
 Plug 'vim-expand-region'
 let g:plug_url_format = 'git@github.com:%s.git'
 Plug 'fatih/vim-go'
+Plug 'vim-airline/vim-airline'
 unlet g:plug_url_format
 
 call plug#end()
