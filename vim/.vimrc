@@ -49,7 +49,7 @@ Plug 'mxw/vim-jsx'
 Plug 'tweekmonster/braceless.vim'
 Plug 'vim-expand-region'
 let g:plug_url_format = 'git@github.com:%s.git'
-Plug 'Blackrush/vim-gocode'
+Plug 'fatih/vim-go'
 unlet g:plug_url_format
 
 call plug#end()
