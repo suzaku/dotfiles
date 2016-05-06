@@ -34,6 +34,7 @@ Plug 'FuzzyFinder'
 Plug 'L9'
 Plug 'Emmet.vim'
 Plug 'python.vim'
+Plug 'tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'kshenoy/vim-signature'
 Plug 'tomasr/molokai'
@@ -184,5 +185,6 @@ autocmd FileType coffee,python BracelessEnable +indent +highlight
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
+let g:ycm_register_as_syntastic_checker = 0
 
 " let g:jsx_ext_required = 0
