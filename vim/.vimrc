@@ -157,6 +157,7 @@ nmap <leader>x :x<CR>
 imap <leader>w <ESC>:w<CR>
 nmap <leader>b :Gblame<CR>
 au FileType go nmap <leader>r <Plug>(go-run)
+nmap <leader>T :TagbarToggle<CR>
 
 ab #X #XXX DIRTY
 ab //X //XXX DIRTY
@@ -175,13 +176,14 @@ let g:user_emmet_settings = {
 
 set statusline=%t%m%y%{fugitive#statusline()}%=(%c,%l)\ %L\ lines\ %p%%
 
-autocmd FileType html setlocal sw=2 ts=2 softtabstop=2
-autocmd FileType slim setlocal sw=2 ts=2 softtabstop=2
-autocmd FileType ruby setlocal ts=2 sts=2 sw=2
-autocmd FileType scss setlocal ts=2 sts=2 sw=2
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2
-autocmd FileType coffee setlocal ts=2 sts=2 sw=2
-autocmd FileType coffee,python BracelessEnable +indent +highlight
+au FileType html setlocal sw=2 ts=2 softtabstop=2
+au FileType slim setlocal sw=2 ts=2 softtabstop=2
+au FileType ruby setlocal ts=2 sts=2 sw=2
+au FileType scss setlocal ts=2 sts=2 sw=2
+au FileType yaml setlocal ts=2 sts=2 sw=2
+au FileType coffee setlocal ts=2 sts=2 sw=2
+au FileType coffee,python BracelessEnable +indent +highlight
+au FileType go nmap <leader>m :GoImport <C-r><C-w><CR>
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
