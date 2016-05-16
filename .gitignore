@@ -2,3 +2,4 @@ zsh/.local_zshrc
 *.sw[op]
 vim/.vim/autoload
 vim/.vim/plugged
+vim/.vim/.netrwhist
