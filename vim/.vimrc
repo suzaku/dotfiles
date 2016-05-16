@@ -173,6 +173,14 @@ let g:user_emmet_settings = {
 \      'df' : "def ${cursor}():\n",
 \      'ifm': "if __name__ == '__main__':\n",
 \    }
+\  },
+\  'go': {
+\       'snippets': {
+\           'interface': "type ${cursor} interface {\n}",
+\           'struct': "type ${cursor} struct {\n}",
+\           'main': "package main\n\nfunc main() {\n${cursor}\n}",
+\           'err': "if err != nil {\n${cursor}\n}"
+\       }
 \  }
 \}
 
