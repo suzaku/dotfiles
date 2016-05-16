@@ -61,6 +61,7 @@ syntax on
 au BufRead,BufNewFile *.thrift set filetype=thrift 
 au BufRead,BufNewFile *.sls set filetype=yaml
 au BufRead,BufNewFile *.coffee set filetype=coffee
+au BufRead,BufNewFile Vagrantfile set filetype=ruby
 
 " tabs and spaces handling
 :set smartindent
