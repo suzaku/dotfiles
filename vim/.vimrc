@@ -180,7 +180,8 @@ let g:user_emmet_settings = {
 \           'interface': "type ${cursor} interface {\n}",
 \           'struct': "type ${cursor} struct {\n}",
 \           'main': "package main\n\nfunc main() {\n${cursor}\n}",
-\           'err': "if err != nil {\n${cursor}\n}"
+\           'err': "if err != nil {\n${cursor}\n}",
+\           'go': "go func() {\n\t${cursor}\n}()"
 \       }
 \  }
 \}
