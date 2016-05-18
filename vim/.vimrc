@@ -37,7 +37,6 @@ Plug 'python.vim'
 Plug 'tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'kshenoy/vim-signature'
-Plug 'tomasr/molokai'
 Plug 'sprsquish/thrift.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ekalinin/Dockerfile.vim'
@@ -104,8 +103,8 @@ imap <C-J> <C-X><C-O>
 ca w!! w !sudo tee "%"
 
 set background=dark
-"let g:solarized_termcolors=256
-colorscheme molokai
+let g:solarized_termcolors=256
+colorscheme solarized
 
 let python_highlight_all=1
 
