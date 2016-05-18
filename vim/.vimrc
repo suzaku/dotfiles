@@ -166,6 +166,7 @@ ab //X //XXX DIRTY
 ab pdb import pdb; pdb.set_trace() #XXX DIRTY
 ab ipdb import ipdb; ipdb.set_trace() #XXX DIRTY
 
+let g:user_emmet_install_global = 0
 let g:user_emmet_settings = {
 \  'indentation' : '    ',
 \  'python': {
@@ -194,6 +195,7 @@ au FileType yaml setlocal ts=2 sts=2 sw=2
 au FileType coffee setlocal ts=2 sts=2 sw=2
 au FileType coffee,python BracelessEnable +indent +highlight
 au FileType go nmap <leader>m :GoImport <C-r><C-w><CR>
+au FileType html,css,go,python EmmetInstall
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
