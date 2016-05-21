@@ -48,6 +48,7 @@ Plug 'mxw/vim-jsx'
 Plug 'tweekmonster/braceless.vim'
 Plug 'vim-expand-region'
 Plug 'lambdatoast/elm.vim'
+Plug 'FooSoft/vim-argwrap'
 let g:plug_url_format = 'git@github.com:%s.git'
 Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline'
@@ -196,6 +197,7 @@ au FileType coffee setlocal ts=2 sts=2 sw=2
 au FileType coffee,python BracelessEnable +indent +highlight
 au FileType go nmap <leader>m :GoImport <C-r><C-w><CR>
 au FileType html,css,go,python EmmetInstall
+au FileType python nmap <silent> <leader>a :ArgWrap<CR>
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
