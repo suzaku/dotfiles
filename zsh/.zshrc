@@ -48,6 +48,24 @@ f_func() {
     git --no-pager grep --color -n --heading --break -w "def $1"
 }
 
+clone_() {
+    local raw_url=$1
+    if [[ $raw_url == "git@*" ]] ; then
+        local url=$1
+    elif [[ ${raw_url:0:4} == "http" ]] ; then
+        if [[ ${raw_url:0:5} == "https" ]] ; then
+            local start=8
+        else
+            local start=7
+        fi
+        local repo="${raw_url:$start}"
+        local arr
+        arr=($(echo $repo | tr "/" " "))
+        local url="git@${arr[1]}:${arr[2]}/${arr[3]}.git"
+    fi
+    git clone $url
+}
+
 alias gack="git --no-pager grep --color -n --heading --break"
 alias vi=vim
 alias -s git="git clone"
