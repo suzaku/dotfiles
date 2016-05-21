@@ -50,6 +50,7 @@ f_func() {
 
 alias gack="git --no-pager grep --color -n --heading --break"
 alias vi=vim
+alias -s git="git clone"
 
 if [ -e $HOME/.local_zshrc ];
 then 
