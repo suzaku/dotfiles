@@ -177,8 +177,8 @@ let g:user_emmet_settings = {
 \  },
 \  'go': {
 \       'snippets': {
-\           'interface': "type ${cursor} interface {\n}",
-\           'struct': "type ${cursor} struct {\n}",
+\           'int': "type ${cursor} interface {\n}",
+\           'str': "type ${cursor} struct {\n}",
 \           'main': "package main\n\nfunc main() {\n\t${cursor}\n}",
 \           'err': "if err != nil {\n${cursor}\n}",
 \           'go': "go func() {\n\t${cursor}\n}()"
