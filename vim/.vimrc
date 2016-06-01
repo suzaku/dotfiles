@@ -25,7 +25,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
@@ -104,8 +103,7 @@ imap <C-J> <C-X><C-O>
 ca w!! w !sudo tee "%"
 
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme delek
 
 let python_highlight_all=1
 
