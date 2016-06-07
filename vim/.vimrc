@@ -191,7 +191,6 @@ au FileType ruby setlocal ts=2 sts=2 sw=2
 au FileType scss setlocal ts=2 sts=2 sw=2
 au FileType yaml setlocal ts=2 sts=2 sw=2
 au FileType coffee setlocal ts=2 sts=2 sw=2
-au FileType coffee,python BracelessEnable +indent +highlight
 au FileType go nmap <leader>m :GoImport <C-r><C-w><CR>
 au FileType html,css,go,python EmmetInstall
 au FileType python nmap <silent> <leader>a :ArgWrap<CR>
