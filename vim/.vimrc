@@ -47,6 +47,12 @@ Plug 'mxw/vim-jsx'
 Plug 'vim-expand-region'
 Plug 'lambdatoast/elm.vim'
 Plug 'FooSoft/vim-argwrap'
+Plug 'ervandew/supertab'
+
+" snippets related plugins
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+
 let g:plug_url_format = 'git@github.com:%s.git'
 Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline'
@@ -200,7 +206,15 @@ let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 let g:ycm_register_as_syntastic_checker = 0
 
-" let g:jsx_ext_required = 0
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
