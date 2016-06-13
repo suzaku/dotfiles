@@ -170,6 +170,7 @@ let g:user_emmet_settings = {
 \    'snippets': {
 \      'df' : "def ${cursor}():\n",
 \      'ifm': "if __name__ == '__main__':\n",
+\      'init': "def __init__(self, ${cursor}):"
 \    }
 \  },
 \  'go': {
@@ -200,3 +201,7 @@ let g:ycm_server_log_level = 'debug'
 let g:ycm_register_as_syntastic_checker = 0
 
 " let g:jsx_ext_required = 0
+
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+set rtp+=~/projects/open-source/ocp-indent-vim
