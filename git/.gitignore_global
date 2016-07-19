@@ -3,3 +3,5 @@
 .python-version
 .cache/
 .DS_Store
+.coverage
+.tox
