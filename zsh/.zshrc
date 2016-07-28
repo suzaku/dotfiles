@@ -69,6 +69,8 @@ clone_() {
 alias gack="git --no-pager grep --color -n --heading --break"
 alias vi=vim
 alias -s git="git clone"
+alias master="git co master"
+alias rm_none_imgs="docker rmi $(docker images | grep '^<none>' | awk '{print $3}')"
 
 if [ -e $HOME/.local_zshrc ];
 then 
