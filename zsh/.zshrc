@@ -89,4 +89,6 @@ eval "$(pyenv virtualenv-init -)"
 export HISTFILESIZE=10000 # Record last 10,000 commands
 export HISTSIZE=10000 # Record last 10,000 commands per session
 
+setopt HIST_IGNORE_ALL_DUPS # http://zsh.sourceforge.net/Doc/Release/Options.html
+
 [[ -s $HOME/.shonenjump.zsh ]] && source $HOME/.shonenjump.zsh
