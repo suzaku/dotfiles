@@ -36,7 +36,6 @@ Plug 'python.vim'
 Plug 'tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'kshenoy/vim-signature'
-Plug 'sprsquish/thrift.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'vim-stylus'
@@ -48,6 +47,8 @@ Plug 'vim-expand-region'
 Plug 'lambdatoast/elm.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'ervandew/supertab'
+Plug 'jnurmine/Zenburn'
+Plug 'rizzatti/dash.vim'
 
 " snippets related plugins
 Plug 'sirver/ultisnips'
@@ -108,7 +109,7 @@ imap <C-J> <C-X><C-O>
 ca w!! w !sudo tee "%"
 
 set background=dark
-colorscheme delek
+colorscheme zenburn
 
 let python_highlight_all=1
 
@@ -154,6 +155,9 @@ nmap <leader>E :FufFileWithCurrentBufferDir<CR>
 nmap <leader>g :FufBufferTag<CR>
 nmap <leader>f :FufLine<CR>
 let g:fuf_file_exclude = '\v\.pyc$|\.swp$|\.beam$'
+
+" dash
+nmap <leader>s <Plug>DashSearch
 
 " other shortcuts
 nmap <leader>w :w<CR>
