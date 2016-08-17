@@ -79,8 +79,6 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-[ $USER = vagrant ] && tmux has-session 2> /dev/null && [ -z $TMUX ] && [ -z $(tmux list-clients) ] && tmux attach
-
 PIPSI_PATH="$HOME/.local/bin"
 export PATH="$HOME/.pyenv/bin:$PATH:/usr/local/opt/go/libexec/bin:$PIPSI_PATH:$GOPATH/bin"
 eval "$(pyenv init -)"
