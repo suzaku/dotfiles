@@ -47,7 +47,7 @@ Plug 'vim-expand-region'
 Plug 'lambdatoast/elm.vim'
 Plug 'FooSoft/vim-argwrap'
 Plug 'ervandew/supertab'
-Plug 'jnurmine/Zenburn'
+Plug 'whatyouhide/vim-gotham'
 Plug 'rizzatti/dash.vim'
 
 " snippets related plugins
@@ -109,7 +109,7 @@ imap <C-J> <C-X><C-O>
 ca w!! w !sudo tee "%"
 
 set background=dark
-colorscheme zenburn
+colorscheme gotham256
 
 let python_highlight_all=1
 
