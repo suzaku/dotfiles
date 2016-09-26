@@ -144,6 +144,8 @@ let OmniCpp_MayCompleteScope = 0
 " change this behaviour with the OmniCpp_SelectFirstItem option.
 let OmniCpp_SelectFirstItem = 0
 
+set omnifunc=syntaxcomplete#Complete
+
 map <F6> /XXXDFKJ<CR>
 
 let mapleader = ","
@@ -209,6 +211,7 @@ au FileType python nmap <silent> <leader>a :ArgWrap<CR>
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 let g:ycm_register_as_syntastic_checker = 0
+let g:syntastic_python_checkers = ['flake8', 'pylint']
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
