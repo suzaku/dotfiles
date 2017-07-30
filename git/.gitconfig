@@ -24,3 +24,6 @@
     followTags = true
 [rerere]
 	enabled = 1
+[grep]
+	extendRegexp = true
+	lineNumber = true
