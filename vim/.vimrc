@@ -49,6 +49,7 @@ Plug 'ervandew/supertab'
 Plug 'whatyouhide/vim-gotham'
 Plug 'rizzatti/dash.vim'
 Plug 'w0rp/ale'
+Plug 'racer-rust/vim-racer'
 
 " snippets related plugins
 Plug 'sirver/ultisnips'
@@ -206,7 +207,7 @@ au FileType yaml setlocal ts=2 sts=2 sw=2
 au FileType coffee setlocal ts=2 sts=2 sw=2
 au FileType go nmap <leader>m :GoImport <C-r><C-w><CR>
 au FileType html,css,go,python EmmetInstall
-au FileType python nmap <silent> <leader>a :ArgWrap<CR>
+au FileType python,rust nmap <silent> <leader>a :ArgWrap<CR>
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
@@ -226,3 +227,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 set rtp+=~/projects/open-source/ocp-indent-vim
+
+set hidden
+let g:racer_cmd = "/Users/satoru/.cargo/bin/racer"
+au FileType rust nmap gd <Plug>(rust-def)
