@@ -110,7 +110,7 @@ imap <C-J> <C-X><C-O>
 ca w!! w !sudo tee "%"
 
 set background=dark
-colorscheme gotham256
+colorscheme darkblue
 
 let python_highlight_all=1
 
