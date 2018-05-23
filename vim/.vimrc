@@ -183,7 +183,8 @@ let g:user_emmet_settings = {
 \    'snippets': {
 \      'df' : "def ${cursor}():\n",
 \      'ifm': "if __name__ == '__main__':\n",
-\      'init': "def __init__(self, ${cursor}):"
+\      'init': "def __init__(self, ${cursor}):",
+\      'mock': "mocker.patch.object(m, '${cursor}')"
 \    }
 \  },
 \  'go': {
