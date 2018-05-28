@@ -103,3 +103,10 @@ man() {
             man "$@"
 }
 
+git_current_repo() {
+    echo $(git remote show -n origin | grep "Push  URL" | sed "s/.*:\([^.]*\).git/\1/")
+}
+
+pr() {
+    open https://gitlab.malong.com/$(git_current_repo)/merge_requests/new\?merge_request%5Bsource_branch%5D=$(git_current_branch)
+}
