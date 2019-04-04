@@ -2,7 +2,7 @@
 	name = satoru
     email = satorulogic@gmail.com
 [core]
-    autocrlf = input
+	autocrlf = false
     safecrlf = true
     editor = /usr/local/bin/vim
 	excludesfile = ~/.gitignore_global
@@ -28,3 +28,5 @@
 [grep]
 	extendRegexp = true
 	lineNumber = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
