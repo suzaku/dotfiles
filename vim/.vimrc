@@ -9,16 +9,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall
 endif
 
-function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
-  if a:info.status == 'installed' || a:info.force
-    !./install.py
-  endif
-endfunction
-
 call plug#begin('~/.vim/plugged')
 
 " Required
@@ -28,7 +18,6 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'vim-scripts/FuzzyFinder'
 Plug 'vim-scripts/L9'
 Plug 'vim-scripts/Emmet.vim'
@@ -50,10 +39,6 @@ Plug 'whatyouhide/vim-gotham'
 Plug 'rizzatti/dash.vim'
 Plug 'w0rp/ale'
 Plug 'racer-rust/vim-racer'
-
-" snippets related plugins
-Plug 'sirver/ultisnips'
-Plug 'honza/vim-snippets'
 
 let g:plug_url_format = 'git@github.com:%s.git'
 Plug 'fatih/vim-go'
@@ -224,10 +209,6 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-set rtp+=~/projects/open-source/ocp-indent-vim
 
 set hidden
 let g:racer_cmd = "/Users/satoru/.cargo/bin/racer"
